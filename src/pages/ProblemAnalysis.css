@@ -1,0 +1,84 @@
+.problem-analysis-page{min-height:calc(100vh - 72px);padding:clamp(22px,4vw,48px) 18px 60px;background:var(--color-background-alt);color:var(--color-text)}
+.problem-analysis-shell{width:min(100%,1000px);margin:0 auto}
+.problem-analysis-heading{max-width:760px;margin:0 0 24px}
+.problem-analysis-eyebrow{display:inline-block;color:var(--color-secondary);font-size:.72rem;font-weight:800;letter-spacing:.12em}
+.problem-analysis-heading h1{margin:8px 0;color:var(--color-primary);font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.15}
+.problem-analysis-heading p{color:var(--color-text-secondary);font-size:1rem;line-height:1.65}
+.problem-analysis-input-card,.problem-analysis-overview,.problem-analysis-section,.problem-analysis-plan,.problem-analysis-questions{border:1px solid var(--color-border);border-radius:14px;background:var(--color-background);box-shadow:0 5px 18px rgb(22 63 101 / .06)}
+.problem-analysis-input-card{display:grid;gap:12px;padding:clamp(16px,3vw,24px)}
+.problem-analysis-input-card>label{color:var(--color-primary);font-size:.95rem;font-weight:750}
+.problem-analysis-input-card textarea,.problem-analysis-edit-fields textarea,.problem-analysis-edit-title{width:100%;min-width:0;border:1px solid var(--color-border);border-radius:9px;background:#fff;color:var(--color-text);font:inherit;line-height:1.55}
+.problem-analysis-input-card textarea{min-height:180px;padding:13px;resize:vertical}
+.problem-analysis-input-card textarea:focus,.problem-analysis-edit-fields textarea:focus,.problem-analysis-edit-title:focus,.problem-analysis-task-footer select:focus{outline:3px solid rgb(66 183 245 / .24);border-color:var(--color-secondary)}
+.problem-analysis-input-footer{display:flex;justify-content:space-between;gap:12px;color:var(--color-text-secondary);font-size:.78rem;line-height:1.5}
+.problem-analysis-count{flex:0 0 auto;font-variant-numeric:tabular-nums}
+.problem-analysis-primary,.problem-analysis-result-actions button,.problem-analysis-task-footer button,.problem-analysis-edit-fields button{min-height:40px;padding:9px 15px;border:0;border-radius:8px;background:var(--color-primary);color:#fff;font:inherit;font-size:.86rem;font-weight:700;cursor:pointer;transition:background .16s,transform .16s}
+.problem-analysis-primary{justify-self:start;display:inline-flex;align-items:center;gap:9px;min-width:140px;justify-content:center}
+.problem-analysis-primary:hover:not(:disabled),.problem-analysis-result-actions button:hover,.problem-analysis-task-footer button:hover,.problem-analysis-edit-fields button:hover{background:var(--color-primary-hover);transform:translateY(-1px)}
+.problem-analysis-primary:disabled{opacity:.55;cursor:not-allowed}
+.problem-analysis-spinner{display:inline-block;width:16px;height:16px;border:2px solid rgb(255 255 255 / .4);border-top-color:#fff;border-radius:50%;animation:problem-analysis-spin .8s linear infinite}
+@keyframes problem-analysis-spin{to{transform:rotate(360deg)}}
+.problem-analysis-alert,.problem-analysis-notice{margin-top:14px;padding:12px 15px;border:1px solid;border-radius:9px;font-size:.9rem}
+.problem-analysis-alert{border-color:#fecaca;background:#fef2f2;color:#991b1b}
+.problem-analysis-notice{border-color:#bbf7d0;background:#f0fdf4;color:#166534}
+.problem-analysis-loading{display:flex;align-items:center;gap:11px;margin-top:18px;padding:17px;border-radius:10px;background:#e8f7fe;color:var(--color-primary);font-weight:650}
+.problem-analysis-loading .problem-analysis-spinner{border-color:#9bdcfa;border-top-color:var(--color-primary)}
+.problem-analysis-empty{margin-top:22px;padding:34px 20px;border:1px dashed #bfd1e0;border-radius:13px;background:rgb(255 255 255 / .65);text-align:center}
+.problem-analysis-empty-mark{display:grid;place-items:center;width:44px;height:44px;margin:0 auto 12px;border-radius:13px;background:#e8f7fe;color:var(--color-primary);font-size:.85rem;font-weight:850}
+.problem-analysis-empty h2{color:var(--color-primary);font-size:1.15rem}
+.problem-analysis-empty p{max-width:550px;margin:7px auto 0;color:var(--color-text-secondary);font-size:.9rem;line-height:1.55}
+.problem-analysis-results{display:grid;gap:17px;margin-top:30px}
+.problem-analysis-result-heading{display:flex;align-items:end;justify-content:space-between;gap:16px}
+.problem-analysis-result-heading h2{margin-top:5px;color:var(--color-primary);font-size:1.55rem}
+.problem-analysis-result-actions{display:flex;flex-wrap:wrap;gap:8px}
+.problem-analysis-result-actions button{min-height:36px;padding:7px 11px;font-size:.78rem}
+.problem-analysis-result-actions button+button{border:1px solid var(--color-border);background:#fff;color:var(--color-primary)}
+.problem-analysis-result-actions button+button:hover{background:#f3f7fb}
+.problem-analysis-overview{display:grid;grid-template-columns:1.25fr 1fr;gap:18px;padding:20px}
+.problem-analysis-overview h3,.problem-analysis-questions h3,.problem-analysis-plan h3{margin-bottom:6px;color:var(--color-primary);font-size:1rem}
+.problem-analysis-overview p{color:var(--color-text-secondary);font-size:.9rem;line-height:1.6;overflow-wrap:anywhere}
+.problem-analysis-sections{display:grid;gap:16px}
+.problem-analysis-section{padding:18px}
+.problem-analysis-section-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding-bottom:15px;border-bottom:1px solid var(--color-border)}
+.problem-analysis-section-heading>div{display:flex;align-items:flex-start;gap:11px;min-width:0}
+.problem-analysis-section-heading>div>span,.problem-analysis-plan ol>li>span{display:grid;place-items:center;flex:0 0 auto;width:30px;height:30px;border-radius:9px;background:#e8f7fe;color:var(--color-primary);font-size:.74rem;font-weight:800}
+.problem-analysis-section-heading h3{color:var(--color-primary);font-size:1.08rem}
+.problem-analysis-section-heading p{margin-top:3px;color:var(--color-text-secondary);font-size:.83rem;line-height:1.5;overflow-wrap:anywhere}
+.problem-analysis-section-heading>small{flex:0 0 auto;color:var(--color-text-secondary);font-size:.75rem}
+.problem-analysis-task-list{display:grid;gap:12px;padding-top:13px}
+.problem-analysis-task{min-width:0;padding:15px;border:1px solid var(--color-border);border-radius:10px;background:#fff}
+.problem-analysis-task.is-completed{background:#f7fcf8}
+.problem-analysis-task-topline{display:flex;align-items:center;gap:10px;min-width:0}
+.problem-analysis-task-topline h4{flex:1;min-width:0;color:var(--color-text);font-size:.96rem;overflow-wrap:anywhere}
+.problem-analysis-task.is-completed .problem-analysis-task-topline h4{text-decoration:line-through;color:var(--color-text-secondary)}
+.problem-analysis-check{display:grid;place-items:center;flex:0 0 auto;width:22px;height:22px}
+.problem-analysis-check input{width:17px;height:17px;accent-color:var(--color-success);cursor:pointer}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.problem-analysis-priority{flex:0 0 auto;padding:4px 8px;border-radius:999px;font-size:.68rem;font-weight:800}
+.priority-high{background:#fee2e2;color:#b91c1c}.priority-medium{background:#fef3c7;color:#92400e}.priority-low{background:#e8f7fe;color:#075985}
+.problem-analysis-task>p{margin:10px 0;color:var(--color-text-secondary);font-size:.87rem;line-height:1.6;overflow-wrap:anywhere}
+.problem-analysis-solution{display:grid;gap:3px;margin-top:10px;padding:11px 12px;border-left:3px solid var(--color-secondary);border-radius:0 7px 7px 0;background:#f3f9fd;font-size:.84rem;line-height:1.5}
+.problem-analysis-solution b{color:var(--color-primary);font-size:.75rem}
+.problem-analysis-details{margin-top:10px;color:var(--color-text-secondary);font-size:.8rem;line-height:1.55}
+.problem-analysis-details summary{width:max-content;max-width:100%;color:var(--color-primary);font-weight:700;cursor:pointer}
+.problem-analysis-details p{margin-top:6px;overflow-wrap:anywhere}
+.problem-analysis-task-footer{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-top:12px}
+.problem-analysis-task-footer label{display:grid;gap:5px;color:var(--color-text-secondary);font-size:.73rem;font-weight:700}
+.problem-analysis-task-footer select{min-height:34px;padding:6px 9px;border:1px solid var(--color-border);border-radius:7px;background:white;color:var(--color-text);font:inherit;font-size:.8rem}
+.problem-analysis-task-footer button,.problem-analysis-edit-fields button{min-height:34px;padding:7px 11px;font-size:.76rem}
+.problem-analysis-task-footer .problem-analysis-secondary,.problem-analysis-edit-fields .problem-analysis-secondary{border:1px solid var(--color-border);background:white;color:var(--color-primary)}
+.problem-analysis-task-footer .problem-analysis-secondary:hover,.problem-analysis-edit-fields .problem-analysis-secondary:hover{background:#f3f7fb}
+.problem-analysis-edit-title{flex:1;padding:7px 9px;font-size:.9rem;font-weight:700}
+.problem-analysis-edit-fields{display:grid;gap:10px;margin-top:12px}
+.problem-analysis-edit-fields label{display:grid;gap:5px;color:var(--color-text-secondary);font-size:.77rem;font-weight:700}
+.problem-analysis-edit-fields textarea{padding:9px;resize:vertical;font-size:.84rem}
+.problem-analysis-edit-fields>div{display:flex;flex-wrap:wrap;gap:8px}
+.problem-analysis-plan,.problem-analysis-questions{padding:20px}
+.problem-analysis-plan h3{margin-top:4px}
+.problem-analysis-plan ol{display:grid;gap:10px;margin-top:12px;list-style:none}
+.problem-analysis-plan ol>li{display:flex;align-items:flex-start;gap:10px;color:var(--color-text-secondary);font-size:.88rem;line-height:1.55}
+.problem-analysis-plan ol>li>span{width:24px;height:24px;border-radius:50%;font-size:.7rem}
+.problem-analysis-questions ul{display:grid;gap:8px;padding-left:20px;color:var(--color-text-secondary);font-size:.88rem;line-height:1.55}
+.problem-analysis-disclaimer{color:var(--color-text-secondary);font-size:.76rem;line-height:1.5}
+@media(max-width:620px){.problem-analysis-page{padding:22px 12px 40px}.problem-analysis-input-footer{flex-direction:column;gap:3px}.problem-analysis-result-heading{align-items:flex-start;flex-direction:column}.problem-analysis-overview{grid-template-columns:1fr;gap:14px;padding:16px}.problem-analysis-section{padding:14px}.problem-analysis-task{padding:12px}.problem-analysis-task-topline{flex-wrap:wrap}.problem-analysis-task-topline h4{flex-basis:calc(100% - 65px)}.problem-analysis-priority{margin-left:31px}.problem-analysis-task-footer{align-items:flex-start}}
+@media(prefers-reduced-motion:reduce){.problem-analysis-page *, .problem-analysis-page *::before,.problem-analysis-page *::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
